@@ -17,6 +17,20 @@ namespace Excerse
             int ret = GetMax(new int[] { 2, 3, 4, 5, 6 });
 
             Console.WriteLine(ret);
+
+
+            int a = 100;
+            Change(ref a);
+
+            Console.WriteLine("a={0}",a);
+
+            
+            string strOut;
+
+            Change(ref a, out strOut);
+
+            Console.WriteLine("a={0}\r\n strOut={1}",a,strOut);
+
             Console.ReadLine();
 
 
@@ -43,5 +57,17 @@ namespace Excerse
         }
 
 
+        // Ref 示例
+        static void Change(ref int a)
+        {
+            a = 30;
+        }
+
+        // Out 示例
+        static void Change(ref int a, out string ret)
+        {
+            a = 80;
+            ret = "hello";
+        }
     }
 }
