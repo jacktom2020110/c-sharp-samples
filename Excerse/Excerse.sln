@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShape", "MultiShape\Mu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateDemo", "DelegateDemo\DelegateDemo.csproj", "{7EEECAEC-D096-4B70-96DF-37332FF183B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "匿名方法", "匿名方法\匿名方法.csproj", "{6826458C-BCB9-4ABD-92C6-266F2DBF34D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{7EEECAEC-D096-4B70-96DF-37332FF183B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EEECAEC-D096-4B70-96DF-37332FF183B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EEECAEC-D096-4B70-96DF-37332FF183B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6826458C-BCB9-4ABD-92C6-266F2DBF34D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6826458C-BCB9-4ABD-92C6-266F2DBF34D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6826458C-BCB9-4ABD-92C6-266F2DBF34D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6826458C-BCB9-4ABD-92C6-266F2DBF34D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
