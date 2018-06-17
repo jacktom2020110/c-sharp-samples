@@ -1,0 +1,35 @@
+﻿@model List<Product>
+@{
+    Layout = null;
+}
+
+@using EF.Models;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <a href="/Home/Add">添加产品</a>
+        <table>
+            <tr>
+                <td>产品名</td>
+                <td>价格</td>
+                <td>删除</td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.ProductPrice</td>
+                    <td><a href="Home/Del/@item.ProductID" onclick="return confirm('是否鹕认？') ">删除</a></td>
+                    <td><a href="Home/Edit/@item.ProductID">编辑</a></td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿@model EF.Models.Product
+@{
+    Layout = null;
+}
+@using EF.Models;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        <form action="/Home/EditPro">
+            产品名:<input type="text" name="ProductName" value="@Model.ProductName" /><input type="hidden" name="ProductID" value="@Model.ProductID"/><br />
+            产品价格:<input type="text" name="ProductPrice" value="@Model.ProductPrice" /><br />
+            <input type="submit" value="修改" />
+        </form>   
+    </div>
+</body>
+</html>
