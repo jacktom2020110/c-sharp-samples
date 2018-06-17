@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class_Constructor", "Class_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleClass", "SingleClass\SingleClass.csproj", "{38EE5607-0B85-4300-8E43-364C5613C135}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShape", "MultiShape\MultiShape.csproj", "{21446C25-8E5B-4806-B21F-356A730D9BD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShape", "MultiShape\MultiShape.csproj", "{21446C25-8E5B-4806-B21F-356A730D9BD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateDemo", "DelegateDemo\DelegateDemo.csproj", "{7EEECAEC-D096-4B70-96DF-37332FF183B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{21446C25-8E5B-4806-B21F-356A730D9BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21446C25-8E5B-4806-B21F-356A730D9BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21446C25-8E5B-4806-B21F-356A730D9BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EEECAEC-D096-4B70-96DF-37332FF183B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EEECAEC-D096-4B70-96DF-37332FF183B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EEECAEC-D096-4B70-96DF-37332FF183B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EEECAEC-D096-4B70-96DF-37332FF183B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
