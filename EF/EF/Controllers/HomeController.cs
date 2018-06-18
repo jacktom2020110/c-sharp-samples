@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 using System.Data.Entity;
-
 using EF.Models;
+
+#region 身份认证库
+using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.OpenIdConnect;
+#endregion
 
 namespace EF.Controllers
 {
@@ -94,18 +98,31 @@ namespace EF.Controllers
             }
 
         }
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
+
+
+        /// <summary>
+        /// Send an OpenID Connect sign-in request.
+        /// Alternatively, you can just decorate the SignIn method with the [Authorize] attribute
+        /// </summary>
+        public void SignIn()
+        {
+            if (!Request.IsAuthenticated)
+            {
+                HttpContext.GetOwinContext().Authentication.Challenge(
+                    new AuthenticationProperties { RedirectUri = "/" },
+                    OpenIdConnectAuthenticationDefaults.AuthenticationType);
+            }
         }
 
-        public ActionResult Contact()
+        /// <summary>
+        /// Send an OpenID Connect sign-out request.
+        /// </summary>
+        public void SignOut()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            HttpContext.GetOwinContext().Authentication.SignOut(
+                OpenIdConnectAuthenticationDefaults.AuthenticationType,
+                CookieAuthenticationDefaults.AuthenticationType);
         }
     }
 }

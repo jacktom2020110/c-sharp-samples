@@ -16,6 +16,9 @@ namespace EF
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //保护整个网站需要登录
+            GlobalFilters.Filters.Add(new AuthorizeAttribute());
         }
     }
 }
