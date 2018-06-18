@@ -11,11 +11,17 @@
     <title>Index</title>
 </head>
 <body>
-    <div> 
+    <div>
+        <form action="/Home/Search" method="get">
+            产品名称:<input type="text" name="ProductName"/>
+            产品类型:@Html.DropDownList("cid")
+            <input type="submit"   value="查询"/>
+        </form>
         <table>
             <tr>
                 <td>产品名</td>
                 <td>产品类型</td>
+                <td>操作</td>
             </tr>
 
             @foreach (var item in Model)
@@ -23,6 +29,7 @@
                 <tr>
                     <td>@item.ProductName</td>
                     <td>@item.cat.CategoryName</td>
+                    <td><a href="/Home/Edit/@item.ProductID">修改</a></td>
                 </tr>
             }
         </table>

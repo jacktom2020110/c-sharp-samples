@@ -15,10 +15,40 @@ namespace ProductWeb.Controllers
 
         public ActionResult Index()
         {
-            
+            ViewBag.cid = new SelectList(bll.GetCategories(),"CategoryID","CategoryName");
+
             return View(bll.GetProducts());
         }
 
+        public ActionResult Search(string pName, int? cid)
+        {
+            List<Product> lst = bll.Search(pName, cid);
+            ViewBag.cid = new SelectList(bll.GetCategories(), "CategoryID", "CategoryName");
+
+            return View("Index",lst);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            Product pro = bll.GetProductByPID(id);
+
+            ViewBag.CategoryID = new SelectList(bll.GetCategories(), "CategoryID", "CategoryName",pro.CategoryID);
+
+            return View(pro);
+
+        }
+
+        public ActionResult Editdo(Product pro)
+        {
+            if (bll.Edit(pro) > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return Content("<script>Alert('修改失败!')</script>");
+            }
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
