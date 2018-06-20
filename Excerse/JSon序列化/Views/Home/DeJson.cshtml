@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+@using JSon序列化.Models
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DeJson</title>
+</head>
+<body>
+    <div>@{ 
+
+        Person p = ViewBag.user;
+
+
+
+    }
+       UserName:<h1>@p.UserName;</h1>
+        User Address:<h1>@p.Address;</h1>
+       
+    </div>
+</body>
+</html>
